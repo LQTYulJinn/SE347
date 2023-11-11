@@ -1,0 +1,64 @@
+<div class="header">
+    <h1>MENU</h1>
+</div>
+
+<div class="content">
+    <h2>List dish</h2>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for dishes...">
+    </div>
+    <table class="dish-table">
+      <tr>
+        <th>Dish Name</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Dish 1</td>
+        <td>Type 1</td>
+        <td>$10.99</td>
+        <td>Available</td>
+      </tr>
+      <tr>
+        <td>Dish 2</td>
+        <td>Type 2</td>
+        <td>$12.99</td>
+        <td>Out of Stock</td>
+      </tr>
+      <!-- Thêm các hàng khác trong bảng tại đây -->
+    </table>
+  </div>
+  
+  <div class="dish-detail">
+    <h2>Dish Detail</h2>
+    <div class="image-container">
+      <div class="rounded-image">
+        <img src="./your-image-url.png" alt="Dish Image" id="dishImage">
+      </div>
+      <input type="file" id="fileInput" style="display: none;">
+      <label for="fileInput" class="select-button">Select Image</label>
+    </div>
+    <div class="dish-info">
+      <div class="info-field">
+        <label for="dishName">Name</label>
+        <input type="text" id="dishName">
+      </div>
+      <div class="info-field">
+        <label for="dishType">Type</label>
+        <input type="text" id="dishType">
+      </div>
+      <div class="info-field">
+        <label for="dishPrice">Price</label>
+        <input type="number" id="dishPrice">
+      </div>
+      <div class="info-field">
+        <label for="dishStatus">Status</label>
+        <select id="dishStatus">
+          <option value="available">Available</option>
+          <option value="unavailable">Unavailable</option>
+        </select>
+      </div>
+    </div>
+    <button class="update-button" (click)="updateDish()">Update</button>
+  </div>
